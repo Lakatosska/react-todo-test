@@ -1,6 +1,7 @@
 import Task from '../Task/Task';
 import {FC} from "react";
 import {ITask} from "../../types/task.ts";
+import styles from './TaskList.module.css';
 
 interface TaskListProps {
   tasks: ITask[];
@@ -10,7 +11,7 @@ interface TaskListProps {
 
 const TaskList: FC<TaskListProps> = ({ tasks, toggleTaskCompletion, deleteTask }) => {
   return (
-    <ul>
+    <ul className={styles.list}>
       {tasks.map(task => (
         <Task
           key={task.id}

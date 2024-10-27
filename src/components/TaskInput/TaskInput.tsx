@@ -1,5 +1,6 @@
 import {FC, useState, FormEvent} from 'react';
 import {ITask} from "../../types/task.ts";
+import styles from './TaskInput.module.css';
 
 interface TaskInputProps {
   addTask: (task: ITask) => void;
@@ -17,14 +18,15 @@ const TaskInput: FC<TaskInputProps> = ({ addTask }) => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className={styles.form} >
       <input
         type="text"
         value={taskTitle}
         onChange={(e) => setTaskTitle(e.target.value)}
         placeholder="Type your task here..."
+        className={styles.input}
       />
-      <button type="submit">
+      <button type="submit" className="button">
         Add Item
       </button>
     </form>

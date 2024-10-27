@@ -1,5 +1,6 @@
 import {FC} from "react";
 import {ITask} from "../../types/task.ts";
+import styles from './TaskFilter.module.css';
 
 interface TaskFiltersProps {
   filter: 'all' | 'active' | 'completed';
@@ -17,13 +18,14 @@ const TaskFilter: FC<TaskFiltersProps> = ({ filter, setFilter, tasks }) => {
   ];
 
   return (
-    <div>
+    <div className={styles.info}>
       <span>{`${activeTasksCount} items left`}</span>
-      <div>
+      <div className={styles.buttonGroup}>
         {buttons.map(({ name, label }) => (
           <button
             key={name}
             onClick={() => setFilter(name as 'all' | 'active' | 'completed')}
+            className={`button ${filter === name ? 'button-primary' : 'button-secondary'}`}
           >
             {label}
           </button>

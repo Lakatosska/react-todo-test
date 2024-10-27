@@ -1,0 +1,28 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-medium) 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.checkbox {
+  margin-right: 1rem;
+}
+
+.text {
+  font-size: var(--font-size-medium);
+  color: var(--text-color);
+  word-break: break-all;
+}
+
+.textCompleted {
+  text-decoration: line-through;
+  color: var(--text-color-completed);
+}
