@@ -26,3 +26,13 @@
   text-decoration: line-through;
   color: var(--text-color-completed);
 }
+
+.textInput {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-size: inherit;
+  width: 100%;
+}

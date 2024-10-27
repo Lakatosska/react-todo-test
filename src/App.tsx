@@ -10,6 +10,7 @@ function App() {
     addTask,
     toggleTaskCompletion,
     deleteTask,
+    editTask,
     filter,
     setTaskFilter,
   } = useTasks();
@@ -23,6 +24,7 @@ function App() {
           tasks={tasks}
           toggleTaskCompletion={toggleTaskCompletion}
           deleteTask={deleteTask}
+          editTask={editTask}
         />
         <TaskFilter
           filter={filter}

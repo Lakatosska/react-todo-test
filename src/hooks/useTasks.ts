@@ -29,6 +29,14 @@ const useTasks = () => {
     setTasks(prevTodos => prevTodos.filter(task => task.id !== id));
   };
 
+  const editTask = (id: string, newTitle: string) => {
+    setTasks(prevTasks =>
+      prevTasks.map(task =>
+        task.id === id ? { ...task, title: newTitle } : task
+      )
+    );
+  };
+
   const setTaskFilter = (newFilter: 'all' | 'active' | 'completed') => {
     setFilter(newFilter);
   };
@@ -44,6 +52,7 @@ const useTasks = () => {
     addTask,
     toggleTaskCompletion,
     deleteTask,
+    editTask,
     filter,
     setTaskFilter,
   };
